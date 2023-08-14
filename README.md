@@ -1,0 +1,1 @@
+# contao_extension_chatgpt_field
