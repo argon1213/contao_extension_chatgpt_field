@@ -3,14 +3,12 @@
     "description": "contao extension chat gpt input field",
     "type": "contao-bundle",
     "require": {
-        "php": "^5.6 || ^7.0",
+        "php": "^7.4 || ^8.0",
         "contao/core-bundle": "^4.4",
         "symfony/framework-bundle": "^3.3",
         "league/uri": "^4.0",
         "ausi/slug-generator": "^1.0.1",
-        "admin/contao-extension-chatgpt-field": "dev-main",
-        "symfony/http-client": "*",
-        "nyholm/psr7": "*"
+        "admin/contao-extension-chatgpt-field": "dev-main"
     },
     "require-dev": {
         "contao/manager-plugin": "^2.0",
