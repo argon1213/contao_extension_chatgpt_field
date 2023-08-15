@@ -1,3 +1,5 @@
+<?php
+
 // src/ContaoExtensionChatgptField.php
 
 namespace Admin\ContaoExtensionChatgptField;

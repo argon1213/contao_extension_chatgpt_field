@@ -1,3 +1,5 @@
+<?php
+
 // src/ContaoManager/Plugin.php
 namespace Admin\ContaoExtensionChatgptField\ContaoManager;
 

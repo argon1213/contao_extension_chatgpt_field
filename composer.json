@@ -8,7 +8,9 @@
         "symfony/framework-bundle": "^3.3",
         "league/uri": "^4.0",
         "ausi/slug-generator": "^1.0.1",
-        "admin/contao-extension-chatgpt-field": "dev-main"
+        "admin/contao-extension-chatgpt-field": "dev-main",
+        "symfony/http-client": "*",
+        "nyholm/psr7": "*"
     },
     "require-dev": {
         "contao/manager-plugin": "^2.0",
@@ -36,6 +38,11 @@
         "preferred-install": {
             "admin/*": "source",
             "*": "dist"
+        },
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "php-http/discovery": true,
+            "contao/manager-plugin": true
         }
     },
     "extra": {

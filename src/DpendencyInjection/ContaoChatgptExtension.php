@@ -1,3 +1,5 @@
+<?php
+
 // src/DependencyInjection/ContaoChatgptExtension.php
 
 namespace Admin\ContaoExtensionChatgptField\DependencyInjection;
