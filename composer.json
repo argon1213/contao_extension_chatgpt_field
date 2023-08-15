@@ -1,11 +1,12 @@
 {
-    "name": "admin/contao_extension_chatgpt_field",
+    "name": "admin/contao-extension-chatgpt-field",
     "description": "contao extension chat gpt input field",
     "type": "contao-bundle",
     "require": {
         "contao/core-bundle": "^4.4",
         "league/uri": "^4.0",
-        "ausi/slug-generator": "^1.0.1"
+        "ausi/slug-generator": "^1.0.1",
+        "admin/contao-extension-chatgpt-field": "dev-main"
     },
     "license": "LGPL-3.0-or-later",
     "autoload": {
@@ -23,9 +24,23 @@
         "allow-plugins": {
             "contao-components/installer": true,
             "php-http/discovery": true
+        },
+        "preferred-install": {
+            "admin/*": "source",
+            "*": "dist"
         }
     },
     "extra": {
         "contao-manager-plugin": "Admin\\ContaoExtensionChatgptField\\ContaoManager\\Plugin"
-   }
+   },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/argon1213/contao_extension_chatgpt_field.git"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/argon1213/contao_extension_chatgpt_field/issues",
+        "source": "https://github.com/argon1213/contao_extension_chatgpt_field"
+    }
 }

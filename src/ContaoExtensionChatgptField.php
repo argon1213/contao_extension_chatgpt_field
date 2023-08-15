@@ -1,6 +1,6 @@
 // src/ContaoExtensionChatgptField.php
 
-namespace SomeVendor\ContaoExtensionChatgptField;
+namespace Admin\ContaoExtensionChatgptField;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
