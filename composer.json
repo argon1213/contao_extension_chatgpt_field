@@ -4,17 +4,16 @@
     "type": "contao-bundle",
     "require": {
         "php": "^7.4 || ^8.0",
-        "contao/core-bundle": "^4.4",
-        "symfony/framework-bundle": "^3.3",
-        "league/uri": "^4.0",
-        "ausi/slug-generator": "^1.0.1",
-        "admin/contao-extension-chatgpt-field": "dev-main"
+        "contao/core-bundle": "^4.13",
+        "symfony/config": "^5.4",
+        "symfony/dependency-injection": "^5.4",
+        "symfony/http-kernel": "^5.4"
     },
     "require-dev": {
+        "bamarni/composer-bin-plugin": "^1.5",
         "contao/manager-plugin": "^2.0",
-        "friendsofphp/php-cs-fixer": "^2.12",
-        "phpunit/phpunit": "^5.7.26",
-        "symfony/phpunit-bridge": "^3.2"
+        "phpunit/phpunit": "^9.5",
+        "symfony/phpunit-bridge": "^6.1"
     },
     "conflict": {
         "contao/core": "*",
@@ -38,22 +37,36 @@
             "*": "dist"
         },
         "allow-plugins": {
+            "bamarni/composer-bin-plugin": true,
             "contao-components/installer": true,
-            "php-http/discovery": true,
             "contao/manager-plugin": true
         }
     },
     "extra": {
+        "bamarni-bin": {
+            "bin-links": false,
+            "target-directory": "tools"
+        },
         "contao-manager-plugin": "Admin\\ContaoExtensionChatgptField\\ContaoManager\\Plugin"
    },
+    "support": {
+        "issues": "https://github.com/argon1213/contao_extension_chatgpt_field/issues",
+        "source": "https://github.com/argon1213/contao_extension_chatgpt_field"
+    },
+    "scripts": {
+        "all": [
+            "@unit-tests",
+            "@ecs",
+            "@phpstan"
+        ],
+        "ecs": "@php tools/ecs/vendor/bin/ecs check src tests --config ecs.php --fix --ansi",
+        "phpstan": "@php tools/phpstan/vendor/bin/phpstan analyze --ansi",
+        "unit-tests": "@php vendor/bin/phpunit --colors=always"
+    },
     "repositories": [
         {
             "type": "git",
             "url": "https://github.com/argon1213/contao_extension_chatgpt_field.git"
         }
-    ],
-    "support": {
-        "issues": "https://github.com/argon1213/contao_extension_chatgpt_field/issues",
-        "source": "https://github.com/argon1213/contao_extension_chatgpt_field"
-    }
+    ]
 }
