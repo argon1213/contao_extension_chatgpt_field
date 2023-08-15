@@ -1,5 +1,5 @@
 {
-    "name": "admin/contao-extension-chatgpt-field",
+    "name": "admin/contao_extension_chatgpt_field",
     "description": "contao extension chat gpt input field",
     "type": "contao-bundle",
     "require": {
