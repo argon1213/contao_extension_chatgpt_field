@@ -1,0 +1,31 @@
+{
+    "name": "admin/contao_extension_chatgpt_field",
+    "description": "contao extension chat gpt input field",
+    "type": "contao-bundle",
+    "require": {
+        "contao/core-bundle": "^4.4",
+        "league/uri": "^4.0",
+        "ausi/slug-generator": "^1.0.1"
+    },
+    "license": "LGPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "Admin\\ContaoExtensionChatgptField\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ARGON",
+            "email": "enchanter0221@gmail.com"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "php-http/discovery": true
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Admin\\ContaoExtensionChatgptField\\ContaoManager\\Plugin"
+   }
+}
